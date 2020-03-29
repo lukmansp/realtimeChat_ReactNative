@@ -18,7 +18,7 @@ import firebase from 'firebase';
 const isIOS = Platform.OS === 'ios';
 import Icon from 'react-native-vector-icons/FontAwesome';
 export default class ChatScreen extends React.Component {
-  static navigationOptions = ({navigation}) => {
+  static navigationOptions = ({ navigation }) => {
     return {
       title: navigation.getParam('name', null),
     };
@@ -40,11 +40,11 @@ export default class ChatScreen extends React.Component {
   componentDidMount() {
     this.keyboardShowListener = Keyboard.addListener(
       isIOS ? 'keyboardWillShow' : 'keyboardDidShow',
-      e => this.keyboardEvent(e, true),
+      e => this.keyboardEvent(e, true)
     );
     this.keyboardHideListener = Keyboard.addListener(
       isIOS ? 'keyboardWillHide' : 'keyboardDidHide',
-      e => this.keyboardEvent(e, false),
+      e => this.keyboardEvent(e, false)
     );
     this.state.dbRef
       .child(User.phone)
@@ -77,8 +77,7 @@ export default class ChatScreen extends React.Component {
     ]).start();
   };
   handleChange = key => val => {
-    this.setState({[key]: val});
-    console.log(key);
+    this.setState({ [key]: val });
   };
   convertTime = time => {
     let d = new Date(time);
@@ -109,10 +108,10 @@ export default class ChatScreen extends React.Component {
         this.state.person.phone + '/' + User.phone + '/' + msgId
       ] = message;
       this.state.dbRef.update(updates);
-      this.setState({textMessage: ''});
+      this.setState({ textMessage: '' });
     }
   };
-  renderRow = ({item}) => {
+  renderRow = ({ item }) => {
     return (
       <View
         style={{
@@ -122,47 +121,50 @@ export default class ChatScreen extends React.Component {
           backgroundColor: item.from === User.phone ? '#00897b' : '#7cb342',
           borderRadius: 5,
           marginBottom: 10,
-        }}>
-        <Text style={{color: '#fff', padding: 7, fontSize: 16}}>
+        }}
+      >
+        <Text style={{ color: '#fff', padding: 7, fontSize: 16 }}>
           {item.message}
         </Text>
-        <Text style={{color: '#eee', padding: 3, fontSize: 12}}>
+        <Text style={{ color: '#eee', padding: 3, fontSize: 12 }}>
           {this.convertTime(item.time)}
         </Text>
       </View>
     );
   };
   render() {
-    let {height} = Dimensions.get('window');
+    let { height } = Dimensions.get('window');
     console.disableYellowBox = true;
     return (
-      <KeyboardAvoidingView behavior="height" style={{flex: 1}}>
+      <KeyboardAvoidingView behavior='height' style={{ flex: 1 }}>
         <Animated.View
-          style={[styles.bottomBar, {bottom: this.keyboardHeight}]}>
+          style={[styles.bottomBar, { bottom: this.keyboardHeight }]}
+        >
           <TextInput
             style={styles.inputMessage}
             value={this.state.textMessage}
-            placeholder="Type message"
+            placeholder='Type message'
             onChangeText={this.handleChange('textMessage')}
           />
           <TouchableOpacity
             onPress={this.sendMessage}
-            style={styles.sendButton}>
-            <Icon name="send-o" size={24} color="white" />
+            style={styles.sendButton}
+          >
+            <Icon name='send-o' size={24} color='white' />
           </TouchableOpacity>
         </Animated.View>
         <FlatList
           ref={ref => (this.flatList = ref)}
           onContentSizeChange={() =>
-            this.flatList.scrollToEnd({animated: true})
+            this.flatList.scrollToEnd({ animated: true })
           }
-          onLayout={() => this.flatList.scrollToEnd({animated: true})}
-          style={{padding: 10, height: height * 0.8}}
+          onLayout={() => this.flatList.scrollToEnd({ animated: true })}
+          style={{ padding: 10, height: height * 0.8 }}
           data={this.state.messageList}
           renderItem={this.renderRow}
           keyExtractor={(item, index) => index.toString()}
           ListFooterComponent={
-            <Animated.View style={{height: this.bottomPadding}} />
+            <Animated.View style={{ height: this.bottomPadding }} />
           }
         />
       </KeyboardAvoidingView>

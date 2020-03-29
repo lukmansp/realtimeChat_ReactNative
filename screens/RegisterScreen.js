@@ -11,7 +11,7 @@ import {
   StatusBar,
   Image,
 } from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import User from '../User';
 import firebase from 'firebase';
 import GetLocation from 'react-native-get-location';
@@ -30,7 +30,7 @@ export default class RegisterScreen extends React.Component {
     location: [],
   };
   handleChange = key => val => {
-    this.setState({[key]: val});
+    this.setState({ [key]: val });
   };
   async componentDidMount() {
     await GetLocation.getCurrentPosition({
@@ -44,7 +44,7 @@ export default class RegisterScreen extends React.Component {
         });
       })
       .catch(error => {
-        const {code, message} = error;
+        const { code, message } = error;
         console.log(error, message);
       });
     this._isMounted = true;
@@ -62,11 +62,13 @@ export default class RegisterScreen extends React.Component {
     } else {
       await AsyncStorage.setItem('userPhone', this.state.phone);
       User.phone = this.state.phone;
+      User.email = this.state.email;
       await firebase
         .database()
         .ref('users/' + User.phone)
         .set({
           name: this.state.name,
+          email: this.state.email,
           status: 'online',
           latitude: this.state.location.latitude,
           longitude: this.state.location.longitude,
@@ -94,8 +96,9 @@ export default class RegisterScreen extends React.Component {
         />
         <TouchableOpacity
           style={styles.back}
-          onPress={() => this.props.navigation.goBack()}>
-          <Icon name="arrow-left" size={32} color="#FFF" />
+          onPress={() => this.props.navigation.goBack()}
+        >
+          <Icon name='arrow-left' size={32} color='#FFF' />
         </TouchableOpacity>
         <Text style={styles.greeting}>Hello lets signup </Text>
         <View style={styles.errorMessage}>
@@ -108,45 +111,50 @@ export default class RegisterScreen extends React.Component {
             <Text style={styles.inputTitle}>Phone</Text>
             <TextInput
               style={styles.input}
-              autoCapitalize="none"
+              autoCapitalize='none'
               onChangeText={this.handleChange('phone')}
-              value={this.state.phone}></TextInput>
+              value={this.state.phone}
+            ></TextInput>
           </View>
           <View>
             <Text style={styles.inputTitle}>Full name</Text>
             <TextInput
               style={styles.input}
-              autoCapitalize="none"
+              autoCapitalize='none'
               onChangeText={this.handleChange('name')}
-              value={this.state.name}></TextInput>
+              value={this.state.name}
+            ></TextInput>
           </View>
           <View>
             <Text style={styles.inputTitle}> Email Address</Text>
             <TextInput
               style={styles.input}
-              autoCapitalize="none"
+              autoCapitalize='none'
               onChangeText={this.handleChange('email')}
-              value={this.state.email}></TextInput>
+              value={this.state.email}
+            ></TextInput>
           </View>
-          <View style={{marginTop: 22}}>
+          <View style={{ marginTop: 22 }}>
             <Text style={styles.inputTitle}> Password</Text>
             <TextInput
               style={styles.input}
               secureTextEntry
-              autoCapitalize="none"
+              autoCapitalize='none'
               onChangeText={this.handleChange('password')}
-              value={this.state.password}></TextInput>
+              value={this.state.password}
+            ></TextInput>
           </View>
         </View>
         <TouchableOpacity style={styles.button} onPress={this.submitForm}>
-          <Text style={{color: '#FFF', fontWeight: '500'}}>Sign Up</Text>
+          <Text style={{ color: '#FFF', fontWeight: '500' }}>Sign Up</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={{alignSelf: 'center', marginTop: 32}}>
-          <Text style={{color: '#414959', fontSize: 12}}>
+        <TouchableOpacity style={{ alignSelf: 'center', marginTop: 32 }}>
+          <Text style={{ color: '#414959', fontSize: 12 }}>
             Have accoutn?{' '}
             <Text
-              style={{fontWeight: '500', color: '#E9446A'}}
-              onPress={() => this.props.navigation.navigate('Login')}>
+              style={{ fontWeight: '500', color: '#E9446A' }}
+              onPress={() => this.props.navigation.navigate('Login')}
+            >
               Login
             </Text>
           </Text>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {ActivityIndicator, AsyncStorage, StatusBar, View} from 'react-native';
+import { ActivityIndicator, AsyncStorage, StatusBar, View } from 'react-native';
 import User from '../User';
 import firebase from 'firebase';
 export default class AuthLoadingScreen extends React.Component {
@@ -33,7 +33,7 @@ export default class AuthLoadingScreen extends React.Component {
     return (
       <View>
         <ActivityIndicator />
-        <StatusBar barStyle="default" />
+        <StatusBar barStyle='default' />
       </View>
     );
   }

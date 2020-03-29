@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/raka/Desktop/reactku/nativeChat/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
                     "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/5efff0256e92f46dffe758d9776545b9/res/values-v16/values-v16.xml",

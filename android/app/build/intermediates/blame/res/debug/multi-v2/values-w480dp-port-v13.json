@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/raka/Desktop/reactku/nativeChat/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w480dp-port-v13/values-w480dp-port-v13.xml",
+            "outputFile": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w480dp-port-v13/values-w480dp-port-v13.xml",
             "map": [
                 {
                     "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/2664f89319bb34b59b30c15b16fd449d/res/values-w480dp-port-v13/values-w480dp-port-v13.xml",

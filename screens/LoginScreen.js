@@ -22,11 +22,11 @@ export default class LoginScreen extends React.Component {
     errorMessage: null,
   };
   handleLogin = () => {
-    const {email, password} = this.state;
+    const { email, password } = this.state;
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
-      .catch(error => this.setState({errorMessage: error.message}));
+      .catch(error => this.setState({ errorMessage: error.message }));
     User.phone = this.state.phone;
     // this.props.navigation.navigate('App');
   };
@@ -34,7 +34,7 @@ export default class LoginScreen extends React.Component {
     LayoutAnimation.easeInEaseOut;
     return (
       <View style={styles.container}>
-        <StatusBar barStyle="light-content"></StatusBar>
+        <StatusBar barStyle='light-content'></StatusBar>
         <Image source={require('../images/Chat-ok.png')} style={styles.logo} />
         {/* <Image
           source={require('../images/menu.png')}
@@ -42,7 +42,7 @@ export default class LoginScreen extends React.Component {
         /> */}
         <Image
           source={require('../images/menu2.png')}
-          style={{position: 'absolute', bottom: -450, right: -305}}
+          style={{ position: 'absolute', bottom: -450, right: -305 }}
         />
         <Text style={styles.greeting}>Hello Wellcome back! </Text>
         <View style={styles.errorMessage}>
@@ -55,37 +55,43 @@ export default class LoginScreen extends React.Component {
             <Text style={styles.inputTitle}> Phone</Text>
             <TextInput
               style={styles.input}
-              autoCapitalize="none"
-              onChangeText={phone => this.setState({phone})}
-              value={this.state.phone}></TextInput>
+              autoCapitalize='none'
+              onChangeText={phone => this.setState({ phone })}
+              value={this.state.phone}
+            ></TextInput>
           </View>
           <View>
             <Text style={styles.inputTitle}> Email Address</Text>
             <TextInput
               style={styles.input}
-              autoCapitalize="none"
-              onChangeText={email => this.setState({email})}
-              value={this.state.email}></TextInput>
+              autoCapitalize='none'
+              onChangeText={email => this.setState({ email })}
+              value={this.state.email}
+            ></TextInput>
           </View>
-          <View style={{marginTop: 32}}>
+          <View style={{ marginTop: 32 }}>
             <Text style={styles.inputTitle}> Password</Text>
             <TextInput
               style={styles.input}
               secureTextEntry
-              autoCapitalize="none"
-              onChangeText={password => this.setState({password})}
-              value={this.state.password}></TextInput>
+              autoCapitalize='none'
+              onChangeText={password => this.setState({ password })}
+              value={this.state.password}
+            ></TextInput>
           </View>
         </View>
         <TouchableOpacity style={styles.button} onPress={this.handleLogin}>
-          <Text style={{color: '#FFF', fontWeight: '500'}}>Sign in</Text>
+          <Text style={{ color: '#FFF', fontWeight: '500' }}>Sign in</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={{alignSelf: 'center', marginTop: 32}}>
+        <TouchableOpacity style={{ alignSelf: 'center', marginTop: 32 }}>
           <Text
-            style={{color: '#414959', fontSize: 12}}
-            onPress={() => this.props.navigation.navigate('Register')}>
+            style={{ color: '#414959', fontSize: 12 }}
+            onPress={() => this.props.navigation.navigate('Register')}
+          >
             New user?{' '}
-            <Text style={{fontWeight: '500', color: '#E9446A'}}>Signup !</Text>
+            <Text style={{ fontWeight: '500', color: '#E9446A' }}>
+              Signup !
+            </Text>
           </Text>
         </TouchableOpacity>
       </View>

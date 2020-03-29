@@ -1,4 +1,4 @@
-#Thu Mar 26 03:04:58 WIB 2020
-base.0=/home/raka/Desktop/reactku/nativeChat/android/app/build/intermediates/transforms/dexMerger/debug/0
+#Sun Mar 29 19:12:35 WIB 2020
+base.0=/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

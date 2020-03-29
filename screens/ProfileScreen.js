@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import User from '../User';
 // import styles from '../constants/styles';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import ImagePicker from 'react-native-image-picker';
 import firebase from 'firebase';
 import GetLocation from 'react-native-get-location';
@@ -25,7 +25,7 @@ export default class ProfileScreen extends React.Component {
   state = {
     name: User.name,
     imageSource: User.image
-      ? {uri: User.image}
+      ? { uri: User.image }
       : require('../images/account.png'),
     upload: false,
     location: [],
@@ -42,7 +42,7 @@ export default class ProfileScreen extends React.Component {
         });
       })
       .catch(error => {
-        const {code, message} = error;
+        const { code, message } = error;
         console.log(error, message);
       });
     this._isMounted = true;
@@ -52,7 +52,7 @@ export default class ProfileScreen extends React.Component {
     this._isMounted = false;
   }
   handleChange = key => val => {
-    this.setState({[key]: val});
+    this.setState({ [key]: val });
   };
   changeName = async () => {
     if (this.state.name.length < 3) {
@@ -89,9 +89,9 @@ export default class ProfileScreen extends React.Component {
         this.setState(
           {
             upload: true,
-            imageSource: {uri: response.uri},
+            imageSource: { uri: response.uri },
           },
-          this.uploadFile,
+          this.uploadFile
         );
       }
     });
@@ -112,7 +112,7 @@ export default class ProfileScreen extends React.Component {
     User.latitude = this.state.location.latitude;
     User.longitude = this.state.location.longitude;
     this.updateUser();
-    this.setState({upload: false, imageSource: {uri: imageUrl}});
+    this.setState({ upload: false, imageSource: { uri: imageUrl } });
   };
   uploadFile = async () => {
     const file = await this.uriToBlob(this.state.imageSource.uri);
@@ -154,11 +154,18 @@ export default class ProfileScreen extends React.Component {
           <View style={styles.avatarContainer}>
             <TouchableOpacity onPress={this.changeImage}>
               {this.state.upload ? (
-                <ActivityIndicator size="large" />
+                <ActivityIndicator size='large' />
               ) : (
                 <Image style={styles.avatar} source={this.state.imageSource} />
               )}
             </TouchableOpacity>
+            <View>
+              <TouchableOpacity onPress={this.changeImage}>
+                <Text style={styles.btnText}>
+                  <Icon name='pencil-alt' size={17} color='black' />
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
           <Text style={styles.name}>{User.phone}</Text>
           <TextInput
@@ -169,7 +176,7 @@ export default class ProfileScreen extends React.Component {
           <View style={styles.edit}>
             <TouchableOpacity onPress={this.changeName}>
               <Text style={styles.btnText}>
-                <Icon name="pencil-alt" size={17} color="black" />
+                <Icon name='pencil-alt' size={17} color='black' />
               </Text>
             </TouchableOpacity>
           </View>
@@ -213,20 +220,20 @@ const styles = StyleSheet.create({
     // borderWidth: 3,
     // borderRadius: 50,
     // borderColor: '#E9446A',
-    shadowOffset: {width: 1, height: 10},
+    shadowOffset: { width: 1, height: 10 },
     shadowColor: '#151372',
     shadowRadius: 50,
     shadowOpacity: 7,
     backgroundColor: '#FFF',
     //elevation: 3,
     // backgroundColor: '#FFF',
-    borderRadius: 70,
+    borderRadius: 80,
     marginTop: 40,
   },
   avatar: {
     marginTop: 30,
     width: 120,
-    height: 100,
+    height: 120,
     borderRadius: 100,
   },
   name: {

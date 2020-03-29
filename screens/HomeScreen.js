@@ -26,8 +26,8 @@ export default class HomeScreen extends React.Component {
     longitude: '',
     location: [],
   };
-  getLocation() {
-    GetLocation.getCurrentPosition({
+  getLocation = async () => {
+    await GetLocation.getCurrentPosition({
       enableHighAccuracy: true,
       timeout: 15000,
     })
@@ -35,17 +35,19 @@ export default class HomeScreen extends React.Component {
         firebase
           .database()
           .ref('/users/' + User.phone)
-          .child('latitude')
-          .push(location.latitude);
+          .child('latitude', 'longitude')
+          .set(location.latitude, location.longitude);
+        // .child('longitude')
+        // .set(location.longitude);
         // db.ref('/user/' + id).child("longitude").set(location.longitude)
       })
       .catch(error => {
-        const {code, message} = error;
+        const { code, message } = error;
         console.warn(code, message);
       });
     this._isMounted = true;
-  }
-  componentDidMount = async () => {
+  };
+  getUser = async () => {
     await this.state.dbRef.on('child_added', val => {
       let person = val.val();
       person.phone = val.key;
@@ -54,29 +56,42 @@ export default class HomeScreen extends React.Component {
         User.image = person.image ? person.image : null;
       } else {
         this.setState(prevState => {
+          firebase
+            .database()
+            .ref('messages')
+            .child(User.phone)
+            .child(person.phone)
+            .on('child_added', val => {
+              person.newTime = val.val().time;
+              person.newMessage = val.val().message;
+            });
           return {
-            users: [...prevState.users, person],
+            users: [person],
           };
         });
       }
     });
-    // await this.getLocation();
+  };
+  componentDidMount = async () => {
+    await this.getUser();
+    await this.getLocation();
   };
   componentWillUnmount() {
     this.state.dbRef.off();
   }
 
-  renderRow = ({item}) => {
+  renderRow = ({ item }) => {
     console.disableYellowBox = true;
 
     LayoutAnimation.easeInEaseOut();
     return (
       <TouchableOpacity
         onPress={() => this.props.navigation.navigate('chat', item)}
-        style={styles.message}>
+        style={styles.message}
+      >
         <Image
           source={
-            item.image ? {uri: item.image} : require('../images/account.png')
+            item.image ? { uri: item.image } : require('../images/account.png')
           }
           style={{
             width: 37,
@@ -87,23 +102,30 @@ export default class HomeScreen extends React.Component {
             marginRight: 10,
           }}
         />
-        <Text style={{fontSize: 17}}>{item.name}</Text>
+        <View>
+          <Text style={{ fontSize: 17 }}>{item.name}</Text>
+          <Text style={{ marginLeft: '80%' }}>
+            {new Date(item.newTime).getHours()}:
+            {new Date(item.newTime).getMinutes()}
+          </Text>
+          <Text style={{ color: '#6a737d' }}>{item.newMessage}...</Text>
+        </View>
       </TouchableOpacity>
     );
   };
   render() {
-    const {height} = Dimensions.get('window');
+    const { height } = Dimensions.get('window');
     return (
-      <SafeAreaView style={{flex: 1}}>
+      <SafeAreaView style={{ flex: 1 }}>
         <FlatList
-          style={{heigh: 10}}
+          style={{ heigh: 10 }}
           data={this.state.users}
           renderItem={this.renderRow}
           keyExtractor={item => item.phone}
           ListHeaderComponent={() => (
             <View style={styles.header}>
               <Text style={styles.title}>
-                <Icon name="md-chatboxes" size={45} />
+                <Icon name='md-chatboxes' size={45} />
               </Text>
             </View>
           )}
