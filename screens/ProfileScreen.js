@@ -36,7 +36,6 @@ export default class ProfileScreen extends React.Component {
       timeout: 15000,
     })
       .then(location => {
-        console.log(location);
         this.setState({
           location: location,
         });
@@ -64,7 +63,13 @@ export default class ProfileScreen extends React.Component {
       this.updateUser();
     }
   };
+
   _logOut = async () => {
+    firebase
+      .database()
+      .ref('/users/' + User.phone)
+      .child('online')
+      .set('offline');
     await AsyncStorage.clear();
     await firebase.auth().signOut;
     this.props.navigation.navigate('Auth');

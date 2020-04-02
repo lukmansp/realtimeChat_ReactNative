@@ -5,7 +5,7 @@
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/anim_catalyst_fade_out.xml.flat",
-        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/e7973ea7cf0f5d965bb3d0274a8c2dfb/res/anim/catalyst_fade_out.xml"
+        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/b75ce0285a934367e81c14aeb38519f2/res/anim/catalyst_fade_out.xml"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
@@ -197,7 +197,7 @@
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable_redbox_top_border_background.xml.flat",
-        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/e7973ea7cf0f5d965bb3d0274a8c2dfb/res/drawable/redbox_top_border_background.xml"
+        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/b75ce0285a934367e81c14aeb38519f2/res/drawable/redbox_top_border_background.xml"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/layout_test_toolbar_surface.xml.flat",
@@ -616,6 +616,10 @@
         "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/5efff0256e92f46dffe758d9776545b9/res/layout/abc_action_bar_up_container.xml"
     },
     {
+        "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_splash_icon.png.flat",
+        "source": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/src/main/res/mipmap-hdpi/splash_icon.png"
+    },
+    {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/raw_amu_basic_folder.kml.flat",
         "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/cda918948eded31e3d7ffd647a3e4f0d/res/raw/amu_basic_folder.kml"
     },
@@ -816,6 +820,10 @@
         "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/5efff0256e92f46dffe758d9776545b9/res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/layout_launch_screen.xml.flat",
+        "source": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/src/main/res/layout/launch_screen.xml"
+    },
+    {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/xml_standalone_badge_gravity_top_start.xml.flat",
         "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/2664f89319bb34b59b30c15b16fd449d/res/xml/standalone_badge_gravity_top_start.xml"
     },
@@ -889,7 +897,7 @@
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/layout_dev_loading_view.xml.flat",
-        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/e7973ea7cf0f5d965bb3d0274a8c2dfb/res/layout/dev_loading_view.xml"
+        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/b75ce0285a934367e81c14aeb38519f2/res/layout/dev_loading_view.xml"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/layout_design_bottom_sheet_dialog.xml.flat",
@@ -1045,7 +1053,7 @@
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/anim_catalyst_slide_up.xml.flat",
-        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/e7973ea7cf0f5d965bb3d0274a8c2dfb/res/anim/catalyst_slide_up.xml"
+        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/b75ce0285a934367e81c14aeb38519f2/res/anim/catalyst_slide_up.xml"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/color_abc_secondary_text_material_light.xml.flat",
@@ -1156,6 +1164,10 @@
         "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/2664f89319bb34b59b30c15b16fd449d/res/drawable/mtrl_ic_arrow_drop_down.xml"
     },
     {
+        "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round2.png.flat",
+        "source": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/src/main/res/mipmap-hdpi/ic_launcher_round2.png"
+    },
+    {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/5efff0256e92f46dffe758d9776545b9/res/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
     },
@@ -1173,7 +1185,7 @@
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/layout_fps_view.xml.flat",
-        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/e7973ea7cf0f5d965bb3d0274a8c2dfb/res/layout/fps_view.xml"
+        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/b75ce0285a934367e81c14aeb38519f2/res/layout/fps_view.xml"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -1477,7 +1489,7 @@
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/anim_catalyst_push_up_in.xml.flat",
-        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/e7973ea7cf0f5d965bb3d0274a8c2dfb/res/anim/catalyst_push_up_in.xml"
+        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/b75ce0285a934367e81c14aeb38519f2/res/anim/catalyst_push_up_in.xml"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/layout-watch-v20_abc_alert_dialog_button_bar_material.xml.flat",
@@ -1521,7 +1533,7 @@
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/anim_catalyst_slide_down.xml.flat",
-        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/e7973ea7cf0f5d965bb3d0274a8c2dfb/res/anim/catalyst_slide_down.xml"
+        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/b75ce0285a934367e81c14aeb38519f2/res/anim/catalyst_slide_down.xml"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
@@ -1981,7 +1993,7 @@
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/anim_catalyst_push_up_out.xml.flat",
-        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/e7973ea7cf0f5d965bb3d0274a8c2dfb/res/anim/catalyst_push_up_out.xml"
+        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/b75ce0285a934367e81c14aeb38519f2/res/anim/catalyst_push_up_out.xml"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_design_ic_visibility.xml.flat",
@@ -1998,6 +2010,10 @@
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_amu_bubble_mask.9.png.flat",
         "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/cda918948eded31e3d7ffd647a3e4f0d/res/drawable-xhdpi-v4/amu_bubble_mask.9.png"
+    },
+    {
+        "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable_background_splash.xml.flat",
+        "source": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/src/main/res/drawable/background_splash.xml"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -2165,7 +2181,7 @@
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/anim_catalyst_fade_in.xml.flat",
-        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/e7973ea7cf0f5d965bb3d0274a8c2dfb/res/anim/catalyst_fade_in.xml"
+        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/b75ce0285a934367e81c14aeb38519f2/res/anim/catalyst_fade_in.xml"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_googleg_standard_color_18.png.flat",
@@ -2206,6 +2222,10 @@
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/layout_abc_screen_simple.xml.flat",
         "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/5efff0256e92f46dffe758d9776545b9/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_splash_icon.png.flat",
+        "source": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/src/main/res/mipmap-xxxhdpi/splash_icon.png"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_dark.xml.flat",
@@ -2529,7 +2549,7 @@
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/layout_redbox_view.xml.flat",
-        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/e7973ea7cf0f5d965bb3d0274a8c2dfb/res/layout/redbox_view.xml"
+        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/b75ce0285a934367e81c14aeb38519f2/res/layout/redbox_view.xml"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -2573,7 +2593,7 @@
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/xml_rn_dev_preferences.xml.flat",
-        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/e7973ea7cf0f5d965bb3d0274a8c2dfb/res/xml/rn_dev_preferences.xml"
+        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/b75ce0285a934367e81c14aeb38519f2/res/xml/rn_dev_preferences.xml"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
@@ -2598,6 +2618,10 @@
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
         "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/5efff0256e92f46dffe758d9776545b9/res/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_splash_icon.png.flat",
+        "source": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/src/main/res/mipmap-xxhdpi/splash_icon.png"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/raw_amu_nested_multigeometry.kml.flat",
@@ -2633,7 +2657,7 @@
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/layout_redbox_item_title.xml.flat",
-        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/e7973ea7cf0f5d965bb3d0274a8c2dfb/res/layout/redbox_item_title.xml"
+        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/b75ce0285a934367e81c14aeb38519f2/res/layout/redbox_item_title.xml"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/anim_abc_tooltip_enter.xml.flat",
@@ -2650,6 +2674,10 @@
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/color_mtrl_chip_text_color.xml.flat",
         "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/2664f89319bb34b59b30c15b16fd449d/res/color/mtrl_chip_text_color.xml"
+    },
+    {
+        "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_splash_icon.png.flat",
+        "source": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/src/main/res/mipmap-xhdpi/splash_icon.png"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -2717,7 +2745,7 @@
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/layout_redbox_item_frame.xml.flat",
-        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/e7973ea7cf0f5d965bb3d0274a8c2dfb/res/layout/redbox_item_frame.xml"
+        "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/b75ce0285a934367e81c14aeb38519f2/res/layout/redbox_item_frame.xml"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
@@ -2842,6 +2870,10 @@
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
         "source": "/home/raka/.gradle/caches/transforms-2/files-2.1/5efff0256e92f46dffe758d9776545b9/res/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_splash_icon.png.flat",
+        "source": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/src/main/res/mipmap-mdpi/splash_icon.png"
     },
     {
         "merged": "/home/raka/Desktop/reactku/Realtimechat_native/android/app/build/intermediates/res/merged/debug/drawable-v21_abc_action_bar_item_background_material.xml.flat",

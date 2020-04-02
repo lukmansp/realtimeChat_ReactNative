@@ -24,7 +24,7 @@ export default class PostScreen extends React.Component {
       };
       ImagePicker.launchImageLibrary(options, response => {
         if (response.uri) {
-          this.setState({image: response});
+          this.setState({ image: response });
         }
       });
     };
@@ -34,7 +34,7 @@ export default class PostScreen extends React.Component {
       };
       ImagePicker.launchCamera(options, response => {
         if (response.uri) {
-          this.setState({image: response});
+          this.setState({ image: response });
         }
       });
     };
@@ -42,10 +42,10 @@ export default class PostScreen extends React.Component {
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
           <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
-            <Icon name="arrow-alt-circle-left" size={24} color="#D8D9DB"></Icon>
+            <Icon name='arrow-alt-circle-left' size={24} color='#D8D9DB'></Icon>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Text style={{fontWeight: '500'}} placeholder="share?">
+            <Text style={{ fontWeight: '500' }} placeholder='share?'>
               PostScreen{' '}
             </Text>
           </TouchableOpacity>
@@ -59,14 +59,15 @@ export default class PostScreen extends React.Component {
             autoFocus={true}
             multiline={true}
             numberOfLines={1}
-            style={{flex: 1}}
-            placeholder="share someting?"></TextInput>
+            style={{ flex: 1 }}
+            placeholder='share someting?'
+          ></TextInput>
         </View>
         <TouchableOpacity style={styles.photo} onPress={this.handleChoosePhoto}>
-          <Icon name="camera" size={32} color="#D8D9Db" />
+          <Icon name='camera' size={32} color='#D8D9Db' />
         </TouchableOpacity>
-        <View style={{marginHorizontal: 32, marginTop: 32, height: 150}}>
-          <Image style={{width: '100%', height: '100%'}}></Image>
+        <View style={{ marginHorizontal: 32, marginTop: 32, height: 150 }}>
+          <Image style={{ width: '100%', height: '100%' }}></Image>
         </View>
       </SafeAreaView>
     );

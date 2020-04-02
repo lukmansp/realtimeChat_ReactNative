@@ -35,11 +35,19 @@ export default class HomeScreen extends React.Component {
         firebase
           .database()
           .ref('/users/' + User.phone)
-          .child('latitude', 'longitude')
-          .set(location.latitude, location.longitude);
-        // .child('longitude')
-        // .set(location.longitude);
-        // db.ref('/user/' + id).child("longitude").set(location.longitude)
+          .child('latitude')
+          .set(location.latitude);
+        firebase
+          .database()
+          .ref('/users/' + User.phone)
+          .child('longitude')
+          .set(location.longitude);
+        firebase
+          .database()
+          .ref('/users/' + User.phone)
+          .child('online')
+          .set('online');
+        User.online = 'online';
       })
       .catch(error => {
         const { code, message } = error;
@@ -66,7 +74,7 @@ export default class HomeScreen extends React.Component {
               person.newMessage = val.val().message;
             });
           return {
-            users: [person],
+            users: [...prevState.users, person],
           };
         });
       }
@@ -81,39 +89,47 @@ export default class HomeScreen extends React.Component {
   }
 
   renderRow = ({ item }) => {
-    console.disableYellowBox = true;
-
     LayoutAnimation.easeInEaseOut();
     return (
-      <TouchableOpacity
-        onPress={() => this.props.navigation.navigate('chat', item)}
-        style={styles.message}
-      >
-        <Image
-          source={
-            item.image ? { uri: item.image } : require('../images/account.png')
-          }
-          style={{
-            width: 37,
-            height: 37,
-            resizeMode: 'contain',
-            borderRadius: 32,
-            resizeMode: 'cover',
-            marginRight: 10,
-          }}
-        />
-        <View>
-          <Text style={{ fontSize: 17 }}>{item.name}</Text>
-          <Text style={{ marginLeft: '80%' }}>
-            {new Date(item.newTime).getHours()}:
-            {new Date(item.newTime).getMinutes()}
-          </Text>
-          <Text style={{ color: '#6a737d' }}>{item.newMessage}...</Text>
-        </View>
-      </TouchableOpacity>
+      <View style={{ flexDirection: 'row', marginTop: 10 }}>
+        <TouchableOpacity
+          onPress={() => this.props.navigation.navigate('FriendProfile', item)}
+        >
+          <Image
+            source={
+              item.image
+                ? { uri: item.image }
+                : require('../images/account.png')
+            }
+            style={{
+              width: 60,
+              height: 60,
+              resizeMode: 'contain',
+              borderRadius: 32,
+              resizeMode: 'cover',
+              marginRight: 10,
+            }}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => this.props.navigation.navigate('chat', item)}
+          style={styles.message}
+        >
+          <View>
+            <Text style={{ fontSize: 17 }}>{item.name}</Text>
+            <Text>{item.online}</Text>
+            <Text style={{ marginLeft: '80%' }}>
+              {new Date(item.newTime).getHours()}:
+              {new Date(item.newTime).getMinutes()}
+            </Text>
+            <Text style={{ color: '#6a737d' }}>{item.newMessage}...</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
     );
   };
   render() {
+    console.disableYellowBox = true;
     const { height } = Dimensions.get('window');
     return (
       <SafeAreaView style={{ flex: 1 }}>
@@ -124,9 +140,10 @@ export default class HomeScreen extends React.Component {
           keyExtractor={item => item.phone}
           ListHeaderComponent={() => (
             <View style={styles.header}>
-              <Text style={styles.title}>
-                <Icon name='md-chatboxes' size={45} />
-              </Text>
+              <Image
+                source={require('../images/Chat-ok.png')}
+                style={{ width: 70, height: 70 }}
+              />
             </View>
           )}
         />

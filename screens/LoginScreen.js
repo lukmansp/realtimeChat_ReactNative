@@ -31,6 +31,7 @@ export default class LoginScreen extends React.Component {
     // this.props.navigation.navigate('App');
   };
   render() {
+    console.disableYellowBox = true;
     LayoutAnimation.easeInEaseOut;
     return (
       <View style={styles.container}>

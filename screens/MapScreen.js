@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import MapView from 'react-native-maps';
 import firebase from 'firebase';
 class MapScreen extends Component {
@@ -34,13 +34,14 @@ class MapScreen extends Component {
     ));
     return (
       <MapView
-        style={{flex: 1, width: window.width}}
+        style={{ flex: 1, width: window.width }}
         region={{
           latitude: -6.6210828,
           longitude: 106.8185388,
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
-        }}>
+        }}
+      >
         {marker}
       </MapView>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   bottomBar: {
     flexDirection: 'row',
@@ -34,13 +34,13 @@ const styles = StyleSheet.create({
     padding: 10,
     borderWidth: 1,
     borderColor: '#ccc',
-    width: '85%',
-    marginBottom: 12,
+    width: '80%',
+    height: '100%',
+    marginBottom: 20,
     borderRadius: 20,
   },
   sendButton: {
-    alignItems: 'center',
-    marginBottom: 12,
+    marginBottom: 20,
     marginLeft: 10,
     height: 40,
     width: 40,

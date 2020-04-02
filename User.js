@@ -5,5 +5,6 @@ const User = {
   image: null,
   latitude: null,
   longitude: null,
+  online: '',
 };
 export default User;

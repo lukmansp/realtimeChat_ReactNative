@@ -63,8 +63,8 @@ export default class ChatScreen extends React.Component {
     this.keyboardHideListener.remove();
   }
   keyboardEvent = (event, isShow) => {
-    let heightOS = isIOS ? 60 : 80;
-    let bottomOS = isIOS ? 120 : 140;
+    let heightOS = isIOS ? 60 : 95;
+    let bottomOS = isIOS ? 120 : 150;
     Animated.parallel([
       Animated.timing(this.keyboardHeight, {
         duration: event.duration,
@@ -120,7 +120,7 @@ export default class ChatScreen extends React.Component {
           alignSelf: item.from === User.phone ? 'flex-end' : 'flex-start',
           backgroundColor: item.from === User.phone ? '#00897b' : '#7cb342',
           borderRadius: 5,
-          marginBottom: 10,
+          marginBottom: 20,
         }}
       >
         <Text style={{ color: '#fff', padding: 7, fontSize: 16 }}>
